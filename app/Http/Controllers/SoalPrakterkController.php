@@ -13,10 +13,14 @@ class SoalPrakterkController extends Controller
     public function index()
     {
 
+        $all_data = Pegawai::all();
+
+        $data = [
+            'all_data' => $all_data
+        ];
 
 
-
-        return view('soal2');
+        return view('table_pegawai', $data);
     }
 
 
