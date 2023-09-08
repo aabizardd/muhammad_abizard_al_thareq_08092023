@@ -159,7 +159,6 @@
             // var h1 = $("#hobi").val();
 
             var hobi = [];
-
             $("input:checkbox[name=hobi]:checked").each(function() {
                 hobi.push($(this).val());
             });

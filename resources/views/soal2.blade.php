@@ -15,118 +15,21 @@
         <div class="header" style="border:  double #32a1ce;blue;width: 700px;padding: 10px">
 
             <center>
-                <h1>Form Data Diri</h1>
+                <h1>Form Data Pegawai</h1>
             </center>
 
 
 
         </div>
 
-        <div class="body" style="border:  double #32a1ce;blue;width: 700px;padding: 10px">
+        <form class="body" style="border:  double #32a1ce;blue;width: 700px;padding: 10px" method="POST">
+            @csrf
+
+            <label for="">Nama Pegawai</label>
+            <input type="text" name="nama_pegawai">
 
 
-            <table>
-                <tr>
-                    <td width=150>Nama Lengkap</td>
-                    <td>:</td>
-                    <td>
-                        <input type="text" name="nama_lengkap" id="nama_lengkap">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td width=150>Tempat, Tanggal Lahir</td>
-                    <td>:</td>
-                    <td>
-                        <input type="text" name="tempat_lahir" id="tempat_lahir">,<input type="number"
-                            name="tanggal_lahir" id="tanggal_lahir" style="width: 10%">,<input type="numbear"
-                            name="bulan_lahir" id="bulan_lahir" style="width: 10%">,<input type="number"
-                            name="tahun_lahir" id="tahun_lahir" style="width: 20%">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td width=150>Alamat</td>
-                    <td>:</td>
-                    <td>
-                        <textarea name="alamat" id="alamat" cols="40" rows="5"></textarea>
-                    </td>
-                </tr>
-
-
-                <tr>
-                    <td width=150>No Telp/HP</td>
-                    <td>:</td>
-                    <td>
-                        <input type="number" name="no_telp" id="no_telp">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td width=150>Jenis Kelamin</td>
-                    <td>:</td>
-                    <td>
-                        <input type="radio" name="jk" value="Laki-laki" id="jk">
-                        <label for="html">Laki-laki</label>
-                        <input type="radio" name="jk" value="Perempuan">
-                        <label for="html">Perempuan</label><br>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td width=150>Agama</td>
-                    <td>:</td>
-                    <td>
-
-                        <select name="agama" id="agama">
-                            <option value="islam">Islam</option>
-                            <option value="kristen">Kristen</option>
-                        </select>
-
-                    </td>
-                </tr>
-
-                <tr>
-                    <td width=150>Hobi</td>
-                    <td>:</td>
-                    <td>
-
-                        <input type="checkbox" id="hobi" name="hobi1" value="Baca Buku">
-                        <label for="hobi1"> Baca Buku</label>
-
-                        <input type="checkbox" id="hobi" name="hobi2" value="Olah Raga">
-                        <label for="hobi2"> Olah Raga</label>
-
-                        <input type="checkbox" id="hobi" name="hobi3" value="Main Game">
-                        <label for="hobi3"> Main Game</label>
-
-
-                        <input type="checkbox" id="hobi" name="hobi4" value="Hiking">
-                        <label for="hobi4"> Hiking</label>
-
-
-                    </td>
-                </tr>
-
-
-                <tr>
-                    <td width=150></td>
-                    <td></td>
-                    <td>
-
-                        <button id="tampilkan" ty>Tampilkan</button>
-                        <button type="reset">Reset</button>
-
-                    </td>
-                </tr>
-
-
-
-
-
-            </table>
-
-        </div>
+        </form>
 
     </div>
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pegawai;
 use Illuminate\Http\Request;
 
 class SoalPrakterkController extends Controller
@@ -14,8 +15,11 @@ class SoalPrakterkController extends Controller
 
 
 
+
         return view('soal2');
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -23,6 +27,8 @@ class SoalPrakterkController extends Controller
     public function create()
     {
         //
+
+
     }
 
     /**
@@ -31,6 +37,12 @@ class SoalPrakterkController extends Controller
     public function store(Request $request)
     {
         //
+
+        $data = $request->all();
+
+        Pegawai::create($data);
+
+        return redirect()->back();
     }
 
     /**
@@ -52,16 +64,33 @@ class SoalPrakterkController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
         //
+
+        $id = $request->post('id');
+
+        $data = $request->all();
+        // unset($data['id_pegawai']);
+
+        $dokumen = Pegawai::find($id);
+
+        $dokumen->update($data);
+
+
+        return redirect()->back();
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         //
+        $dokumen = Pegawai::find($id);
+
+        $dokumen->delete();
+
+        return redirect()->back();
     }
 }

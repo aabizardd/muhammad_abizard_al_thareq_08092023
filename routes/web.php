@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Pegawai;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('soal1');
+});
+
+Route::get('/soal2', function () {
+
+    $all_data = Pegawai::all();
+
+    $data = [
+        'all_data' => $all_data
+    ];
+
+    return view('soal2', $data);
 });
 
 // Route::prefix('monitoring')->group(function () {
