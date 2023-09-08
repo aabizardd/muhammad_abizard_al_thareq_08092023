@@ -68,6 +68,7 @@
                     <td>
                         <input type="radio" name="jk" value="Laki-laki" id="jk">
                         <label for="html">Laki-laki</label>
+
                         <input type="radio" name="jk" value="Perempuan">
                         <label for="html">Perempuan</label><br>
                     </td>
@@ -150,7 +151,7 @@
 
             var alamat = $("#alamat").val();
             var no_telp = $("#no_telp").val();
-            var jk = $("#jk").val();
+            var jk = [];
             var agama = $("#agama").val();
             var h1 = $("#hobi1").val();
             var h2 = $("#hobi2").val();
@@ -161,6 +162,10 @@
 
             $("input:checkbox[name=hobi]:checked").each(function() {
                 hobi.push($(this).val());
+            });
+
+            $("input:radio[name=jk]:checked").each(function() {
+                jk.push($(this).val());
             });
 
 
