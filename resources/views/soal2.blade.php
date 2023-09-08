@@ -91,17 +91,17 @@
                     <td>:</td>
                     <td>
 
-                        <input type="checkbox" id="hobi1" name="hobi" value="Baca Buku">
+                        <input type="checkbox" id="hobi" name="hobi1" value="Baca Buku">
                         <label for="hobi1"> Baca Buku</label>
 
-                        <input type="checkbox" id="hobi2" name="hobi" value="Olah Raga">
+                        <input type="checkbox" id="hobi" name="hobi2" value="Olah Raga">
                         <label for="hobi2"> Olah Raga</label>
 
-                        <input type="checkbox" id="hobi3" name="hobi" value="Main Game">
+                        <input type="checkbox" id="hobi" name="hobi3" value="Main Game">
                         <label for="hobi3"> Main Game</label>
 
 
-                        <input type="checkbox" id="hobi4" name="hobi" value="Hiking">
+                        <input type="checkbox" id="hobi" name="hobi4" value="Hiking">
                         <label for="hobi4"> Hiking</label>
 
 
@@ -152,21 +152,7 @@
             var no_telp = $("#no_telp").val();
             var jk = $("#jk").val();
             var agama = $("#agama").val();
-            var h1 = $("#hobi1").val();
-            var h2 = $("#hobi2").val();
-            var h3 = $("#hobi3").val();
-            // var h1 = $("#hobi").val();
-
-            var hobi = [];
-
-            $("input:checkbox[name=hobi]:checked").each(function() {
-                hobi.push($(this).val());
-            });
-
-
-            // alert(hobi)
-            // alert($("input[type='checkbox']").val())
-
+            var h1 = $("#hobi").val();
 
             // var agama = 
 
@@ -176,7 +162,7 @@
             var hasil = `Nama Lengkap: ` + nama_lengkap + "\n" +
                 `Tempat, Tanggal Lahir: ` + ttl + '\n' + `Alamat: ` + alamat + '\n' + `No Telp/HP: ` +
                 no_telp + '\n' + `Jenis Kelamin: ` + jk + '\n' + `Agama: ` + agama + '\n' + `Hobi: ` +
-                hobi;
+                h1;
 
             alert(hasil)
 

@@ -11,7 +11,10 @@ class SoalPrakterkController extends Controller
      */
     public function index()
     {
-        //
+
+
+
+        return view('soal2');
     }
 
     /**
